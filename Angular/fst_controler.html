@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>First Controler</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="fst" ng-controller="fstctrl">
+            {{ lastPname + " " + lastPage }}
+        </div>
+        <script>
+            var fstapp=angular.module("fst",[]);
+            fstapp.controller("fstctrl",function($scope){
+                $scope.lastPname="Henry";
+                $scope.lastPage=18;
+                $scope.lastprof="Software developer";
+            });
+        </script>
+    </body>
+</html>

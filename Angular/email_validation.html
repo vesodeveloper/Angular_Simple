@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>E-mail Validation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body>
+        <form ng-app="" name="emailForm">
+          Enter your  E-mail:
+          <input type="email" name="myemail" ng-model="emailfield"></br>
+          <span ng-show="emailForm.myemail.$error.email">E-mail you entered is not valid</span></br>
+          Enter a number:
+          <input type="number" name="mynumber" ng-model="numfield">
+          <span ng-show="emailForm.mynumber.$error.number">This is not a number</span>
+        </form>
+
+    </body>
+</html>

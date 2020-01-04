@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add 2 numbers</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body>
+        <h1> Add 2 numbers</h1>
+        <div ng-app="addnum" ng-controller="addcontroler">
+            Enter first number:</br>
+            <input type="number" ng-model="fstnum"></br>
+            Enter second number:</br>
+            <input type="number" ng-model="sndnum"></br>
+            Result is: {{fstnum + sndnum}}
+        </div>
+        <script>
+            var addapp=angular.module("addnum",[]);
+            addapp.controller("addcontroler",function ($scrope){
+                $scrope.fstnum=13;
+                $scrope.sndnum=12;
+            });
+            </script>
+    </body>
+</html>

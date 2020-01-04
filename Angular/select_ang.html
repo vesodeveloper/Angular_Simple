@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Select menu</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="selectos" ng-controller="OSCtrl">
+            <h2>Select your OS bellow:</h2>
+            <select> 
+                <option ng-repeat="x in osmenu">{{x}}</option>
+            </select>
+            
+        </div>
+        <script>
+            var osapp=angular.module("selectos",[]);
+            osapp.controller("OSCtrl",function ($scope){
+                $scope.osmenu=[
+                    {OS:"macOS"},
+                    {OS:"Microsoft Windows"},
+                    {OS:"GNU/Linux"},
+                    {OS:"BSD"}
+                ];
+            });
+            </script>
+    </body>
+</html>

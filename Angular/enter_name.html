@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Enter name</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body>
+        <h1> Enter name </h1>
+        <div ng-app="nameApp" ng-controller="nameCtrl"></br>
+            Enter your name:</br> 
+            <input  ng-model="name">
+            <h1>The name you entered is: {{ name }}</h1>
+        </div>
+        <script>
+            var app=angular.module('nameApp',[]);
+            app.controller('nameCtrl',function ($scope){
+                $scope.name="John Doe";
+            });
+            </script>
+    </body>
+</html>

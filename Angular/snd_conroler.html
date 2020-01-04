@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Second Controler</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body>
+        <h1>Second Controler</h1>
+        <div ng-app="addnum" ng-controller="NumAdd">
+            
+           
+        </div>
+        <p ng-bind="">Result is: {{fstnum+sndnum}}</p>
+        <script>
+            var addnumapp=angular.module("addnum",[]);
+            addnumapp.controller("NumAdd",function ($fstarg){
+                $fstarg.fstnum=5;
+                $fstarg.sndnum=6;
+            });
+        </script>
+    </body>
+</html>
